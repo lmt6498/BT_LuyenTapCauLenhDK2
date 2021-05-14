@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TinhThue</title>
+</head>
+<body>
+<script>
+    const thueBac1 = parseFloat(5*0.01);
+    const thueBac2 = parseFloat(10*0.01);
+    const thueBac3 = parseFloat(15*0.01);
+    const thueBac4 = parseFloat(20*0.01);
+    const thueBac5 = parseFloat(25*0.01);
+    const thueBac6 = parseFloat(30*0.01);
+    const thueBac7 = parseFloat(35*0.01);
+
+    let thuNhap = parseFloat(prompt("Nhập tổng thu nhập năm:"));
+    let nguoiPhuThuoc =parseInt(prompt("Nhập số người phụ thuộc: "));
+
+    let thuNhapChiuThue = thuNhap - 4 - nguoiPhuThuoc*1.6;
+    let tienPhaiTra = 0;
+    if (thuNhapChiuThue <= 60) {
+        tienPhaiTra = (thuNhapChiuThue * thueBac1);
+    } else if (thuNhapChiuThue > 60 && thuNhapChiuThue <= 120) {
+        tienPhaiTra = (thuNhapChiuThue * thueBac2);
+    } else if (thuNhapChiuThue > 120 && thuNhapChiuThue <= 216) {
+        tienPhaiTra = (thuNhapChiuThue * thueBac3);
+    } else if (thuNhapChiuThue > 216 && thuNhapChiuThue <= 384) {
+        tienPhaiTra = (thuNhapChiuThue * thueBac4);
+    } else if (thuNhapChiuThue > 384 && thuNhapChiuThue <= 624) {
+        tienPhaiTra = (thuNhapChiuThue * thueBac5);
+    } else if (thuNhapChiuThue > 624 && thuNhapChiuThue <= 960) {
+        tienPhaiTra = (thuNhapChiuThue * thueBac6);
+    } else {
+        tienPhaiTra = (thuNhapChiuThue * thueBac7);
+    }
+    alert("Số tiền thuế thu nhập cá nhân phải trả là: "+tienPhaiTra);
+
+</script>
+</body>
+</html>
